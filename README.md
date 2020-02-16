@@ -13,4 +13,8 @@ MetaCred is a product designed to allow developers and end users with a 0 balanc
 
 ## Project Mission
 
+We want to create meaningful "on-ramps" into the ethereum ecosystem for developers with limited or no access to cryptocurrency. Our system is designed to allow these developers and their potential end users to be able to interact with the ethereum blockchain in a real and meaningful way (layer 1 transactions) without ever needing to own a single wei. The gas for their transactions will be payed by beneficiaries who are interested in growing the ecosystem and being charitable while feeling secure in (coded) guarentees as to how their funds would be spent by the benefactor.
+
+## High Level Technical Architecture
+
 Coming Soon.
