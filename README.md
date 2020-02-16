@@ -1,4 +1,4 @@
-# ethdenver: MetaCred
+# ethdenver hackathon - MetaCred
 
 MetaCred is a product designed to allow developers and end users with a 0 balance of any crypto currency to participate in the budding ethereum ecosystem.
 
