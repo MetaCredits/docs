@@ -18,3 +18,7 @@ We want to create meaningful "on-ramps" into the ethereum ecosystem for develope
 ## High Level Technical Architecture
 
 Coming Soon.
+
+## Presentation Slides
+
+https://docs.google.com/presentation/d/1j3yCWUTdNgZTGvF94Jbjndc7oqDN5890fnBZU_Ol2zc/edit?usp=sharing
