@@ -4,7 +4,7 @@ MetaCredits is a product designed to allow developers and end users with a 0 bal
 
 ## Repositories
 
- - [MetaCred Smart Contracts](https://github.com/MetaCredits/metacredits-contracts) - Core Solidity smart contracts of the MetaCred product
+ - [MetaCredits Smart Contracts](https://github.com/MetaCredits/metacredits-contracts) - Core Solidity smart contracts of the MetaCred product
  - [MiniDAO Example Smart Contracts](https://github.com/MetaCredits/mini-dao-example/tree/master/minidao-contracts) - an example dapp to demostrate how a Dapp developer team would interact with the system
  - [Relayer Service](https://github.com/MetaCredits/microservices/tree/master/relayer) - AWS lambda microservice for representing a relay pool in our use case
  - [MetaTransaction Approver Service](https://github.com/MetaCredits/microservices/tree/master/metatransaction-approver) - AWS lambda microservice for Dapp Developers to sign their approval of a metatransacaction for their dapp
