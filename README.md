@@ -19,6 +19,13 @@ We want to create meaningful "on-ramps" into the ethereum ecosystem for develope
 
 ![arch](./pics/metacredits-architecture.png)
 
+1. End User (with 0 eth balance) performs an action via the developer's front end Dapp
+2. Dapp front end uses the abi of the deployed contract to create a metatransaction object
+3. User signs a message through the Dapp's web3 provider
+4. The signed message (metatransaction) is sent to the developer's approver microservice where the transaction is parsed and the parameters are used to determine if the dapp developer would like to use his metacredit funding to pay for the transaction
+5. Dapp developer sends his signature of approval as well as the signed metatransaction to a relay service
+6. The relayer pays the gas fee to execute the metatransaction via the metacredits contract, this ensures that he is payed back in full by the contract before the transaction ends.
+7. After validating that the signature submitted alongside the metatransaction matches the dapp developer, the contract forwards the metatransaction to the actual processor contract to execute the metatransaction normally
 
 ## Presentation Slides
 
