@@ -1,4 +1,6 @@
-# Intro
+# MetaCredits Hello, World Blog Post
+
+## Intro
 
 This past weekend I participated in the Eth Denver Hackathon. Together, my team and I came up with the idea to build "MetaCredits", a smart contract designed to automatically fund the gas to execute metatransactions. Metatransactions are unique from regular transactions in that the user who is creating the transaction (signed data) is not posting it as a transaction to the blockchain, instead sending the message to a relayer service which will pay for the gas to execute the transaction that the user signed. For more about metatransactions check out [Austin Griffith's medium post](https://medium.com/@austin_48503/ethereum-meta-transactions-90ccf0859e84).
 
@@ -12,18 +14,37 @@ A small amount of gas can go a long way...the 0.02 eth that you spent on `hellow
 
 ## Technical Components
 
-[pic here]
-
 There are a number of modular components in the MetaCredits solution.
 
-1. Developer Dapp
+### Developer Dapp
 The developer creates a metatransaction enabled smart contract and builds a Dapp. Without ether, they can't deploy their dapp to mainnet, but they can acquire free testnet ether and test out their dapps on one of the test networks.
 
-2. Dapp Approver Microservice
-The Dapp developer can run this tiny lightweight service to verify that the signed metatransaction from his end users match the parameters of transactions he is willing to fund.
+### Dapp Approver Microservice
+The Dapp developer can run this tiny lightweight service to verify that the signed metatransaction from his end users match the parameters of transactions he is willing to fund. 
 
-3. Relayer Microservice
+### Relayer Microservice
 This service contains a funded wallet which will execute the transaction by calling a function on the MetaCredit Funder Contract.
 
-4. MetaCredit Funder Contract
+### MetaCredit Funder Contract
 This contract is funded by a benefactor and the funds inside will be used to repay relayers in full for the gas they spend to execute the metatransaction.
+
+![architecture](../pics/metacredits-architecture.png)
+
+### High Level Flow
+1. End User (with 0 eth balance) performs an action via the developer's front end Dapp
+2. Dapp front end uses the abi of the deployed contract to create a metatransaction object
+3. User signs a message through the Dapp's web3 provider
+4. The signed message (metatransaction) is sent to the developer's approver microservice where the transaction is parsed and the parameters are used to determine if the dapp developer would like to use his metacredit funding to pay for the transaction
+5. Dapp developer sends his signature of approval as well as the signed metatransaction to a relay service
+6. The relayer pays the gas fee to execute the metatransaction via the metacredits contract, this ensures that he is payed back in full by the contract before the transaction ends.
+7. After validating that the signature submitted alongside the metatransaction matches the dapp developer, the contract forwards the metatransaction to the actual processor contract to execute the metatransaction normally
+
+### Design considerations
+
+ - 0 Ether required for Dapp developers and their end users to use public/private key pairs to interact with mainnet dapps
+ - Relayer is guaranteed by the funded contract to recieve a full refund
+ - Dapp developers can have relative sovereignty over their creations, using an approver to filter only specific transaction types they want to fund
+ - Benefactors can be sure their funds will only be spent on the gas to fund the dapps of their choosing, and can stop the contract and refund their gas if they so choose
+ - Metatransaction library extending the web3 functionality of ethers.js to ensure that dapp developers do not have to change patterns to work with the metacredit system ([meta-ethers](https://github.com/rapid-eth/meta-ethers))
+ - Metatransaction processor agnosticism implicitly built into design (can use any/multiple metatransaction schemas)
+ - Dapp funder contracts can continue to be funded by outside beneficiaries if the original benefactor funds run dry
