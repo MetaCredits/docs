@@ -17,7 +17,7 @@ We want to create meaningful "on-ramps" into the ethereum ecosystem for develope
 
 ## High Level Technical Architecture
 
-[](./pics/metacredits-architecture.png)
+![arch](./pics/metacredits-architecture.png)
 
 
 ## Presentation Slides
