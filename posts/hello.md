@@ -48,3 +48,8 @@ This contract is funded by a benefactor and the funds inside will be used to rep
  - Metatransaction library extending the web3 functionality of ethers.js to ensure that dapp developers do not have to change patterns to work with the metacredit system ([meta-ethers](https://github.com/rapid-eth/meta-ethers))
  - Metatransaction processor agnosticism implicitly built into design (can use any/multiple metatransaction schemas)
  - Dapp funder contracts can continue to be funded by outside beneficiaries if the original benefactor funds run dry
+ 
+ 
+### Future plans
+
+Seeing as MetaCredits was concieved and built nearly from scratch in one weekend, there is still a lot of cleaning up to do of the the code base and small but powerful features that will be added. If you want to experience what its like interacting with a "MetaCredit-ified" Dapp check out the simple MiniDAO app at http://minidao.metacredits.io
