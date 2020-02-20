@@ -1,10 +1,9 @@
-# ethdenver hackathon - MetaCredits
+# MetaCredits
 
-MetaCred is a product designed to allow developers and end users with a 0 balance of any crypto currency to participate in the budding ethereum ecosystem.
+MetaCredits is a product designed to allow developers and end users with a 0 balance of any crypto currency to participate in the growing ethereum ecosystem.
 
 ## Repositories
 
- - [MetaCred Dapp Frontend](https://github.com/rapid-eth/meta-credits) - React Web Application for interfacing with MetaCred Smart contracts and services - built with ethers-react-system
  - [MetaCred Smart Contracts](https://github.com/MetaCredits/metacredits-contracts) - Core Solidity smart contracts of the MetaCred product
  - [MiniDAO Example Smart Contracts](https://github.com/MetaCredits/mini-dao-example/tree/master/minidao-contracts) - an example dapp to demostrate how a Dapp developer team would interact with the system
  - [Relayer Service](https://github.com/MetaCredits/microservices/tree/master/relayer) - AWS lambda microservice for representing a relay pool in our use case
