@@ -2,7 +2,7 @@
 
 ## Intro
 
-This past weekend I participated in the Eth Denver Hackathon. Together, my team and I came up with the idea to build "MetaCredits", a smart contract designed to automatically fund the gas to execute metatransactions. Metatransactions are unique from regular transactions in that the user who is creating the transaction (signed data) is not posting it as a transaction to the blockchain, instead sending the message to a relayer service which will pay for the gas to execute the transaction that the user signed. For more about metatransactions check out [Austin Griffith's medium post](https://medium.com/@austin_48503/ethereum-meta-transactions-90ccf0859e84).
+A couple weeks ago, I participated in the Eth Denver Hackathon. Together, my team and I came up with the idea to build “MetaCredits”, a smart contract designed to automatically fund the gas to execute metatransactions. Metatransactions are unique from regular transactions in that the user who is creating the transaction (signed data) is not posting it as a transaction to the blockchain. The user instead is sending the message to a relayer service, which will pay for the gas to execute the transaction the user signed.  For more about metatransactions check out [Austin Griffith's medium post](https://medium.com/@austin_48503/ethereum-meta-transactions-90ccf0859e84).
 
 ## Design Rationale
 
